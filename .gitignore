@@ -218,3 +218,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+.idea
+
+*.swp
+__pycache__
+.pytest_cache
+*.egg-info
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out

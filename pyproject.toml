@@ -1,0 +1,27 @@
+[project]
+name = "ephemeral-kata-orchestrator"
+version = "0.1.0"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "boto3>=1.43.110",
+    "loguru",
+]
+
+[dependency-groups]
+infra = [
+    "aws-cdk-lib>=2.271.0,<3.0.0",
+    "constructs>=10.5.0,<11.0.0",
+    "jsii",
+]
+dev = [
+    "boto3-stubs[boto3,full]>=1.43.110",
+    "pytest==9.0.3",
+    "ruff",
+]
+
+[tool.uv]
+package = false
+default-groups = ["infra", "dev"]
+
+[tool.uv.sources]
+boto3-stubs-custom = { path = "vendored/boto3_stubs_custom-1.43.111-py3-none-any.whl" }
